@@ -6,12 +6,12 @@ const Header = () => {
     <header className={styles.transparent + ' ' + styles.header}>
       <div id={styles.desktop}>
         <div id={styles.logoDesktop}>
-          <Link href="/"> CVue Maker</Link>
+          <Link href="/"> ReactCV Maker</Link>
         </div>
-        <div id={styles.headerDesktopNav}>
+        <nav id={styles.headerDesktopNav}>
           <Link href="/" className={styles.navItem} >Home</Link>
           <Link href="/about" className={styles.navItem} >About</Link>
-        </div>
+        </nav>
       </div>
     </header>
   );
