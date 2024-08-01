@@ -1,0 +1,40 @@
+.header {
+  padding: 20px 0;
+  width: 100%;
+
+  #logoDesktop a {
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+
+  &.transparent {
+    position: absolute;
+    top: 0;
+    z-index: 99999999;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &.solid {
+    background-color: red;
+  }
+
+  #desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #headerDesktopNav {
+    padding-right: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+
+    .navItem {
+      margin: 0 5px;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
