@@ -1,9 +1,11 @@
+"use client"
 import styles from './page.module.scss';
+import ProgressBar from '@/components/Progress/progress';
 
 const Home = () => {
     return ( 
         <main className={styles.main}> 
-            <h1 className={styles.text} >Hello Home</h1>
+            <ProgressBar />
         </main>
      );
 }
