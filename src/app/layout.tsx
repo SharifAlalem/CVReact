@@ -1,6 +1,7 @@
-import './styles/global.scss';
+import '../styles/global.scss';
 import Header from '@/components/layout/Header/header';
 import Footer from '@/components/layout/Footer/footer';
+import { StepsWrapper } from '../context/steps';
 
 export const metadata = {
   title: 'Next.js',
@@ -16,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header/>
-          {children}
+          <StepsWrapper>
+            {children}
+          </StepsWrapper>
         <Footer/>
       </body>
     </html>
