@@ -1,12 +1,16 @@
 import { ReactElement } from 'react';
 
-export interface ArrayOfSteps {
+export type ArrayOfSteps = {
   id: number;
   icon: ReactElement;
   active: boolean;
 }
 
-export interface StepsContext {
+export type StepsContext = {
   steps: ArrayOfSteps[],
   setSteps: Function
+}
+
+export type FloatingIcons = {
+  icon:  ReactElement;
 }
