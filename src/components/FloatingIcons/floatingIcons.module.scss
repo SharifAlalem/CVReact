@@ -1,0 +1,46 @@
+.icon {
+  svg {
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 90vh;
+    transform-style: preserve-3d;
+    opacity: 0;
+  }
+}
+
+$total: 10;
+
+@for $i from 1 through $total {
+  .icon:nth-child(#{$i}) {
+    svg {
+      left: $i * 10%-10%;
+      animation: raise#{$i} 10+$i +$i * 0.01+s linear infinite;
+      animation-delay: random(20) - 20 + s;
+      z-index: 0;
+
+      @keyframes raise#{$i} {
+        0% {
+          transform: scale(0.9);
+        }
+
+        50% {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+
+        100% {
+          opacity: 0;
+          bottom: 0vh;
+          transform: scale(0.9);
+        }
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        left: $i * 10%-30%;
+      }
+    }
+  }
+}

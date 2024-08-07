@@ -2,6 +2,7 @@ import '../styles/global.scss';
 import Header from '@/components/layout/Header/header';
 import Footer from '@/components/layout/Footer/footer';
 import { StepsWrapper } from '../context/steps';
+import FloatingIcons from '@/components/FloatingIcons/floatingIcons';
 
 export const metadata = {
   title: 'Next.js',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <FloatingIcons />
         <Header/>
           <StepsWrapper>
             {children}
